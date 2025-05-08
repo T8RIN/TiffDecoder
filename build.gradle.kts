@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-val libVersion = "1.0.0"
+val libVersion = "1.0.1"
 
 android {
     compileSdk = 36
