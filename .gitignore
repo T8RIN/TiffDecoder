@@ -3,3 +3,6 @@
 *.o.d
 *.so
 *.iml
+/local.properties
+/.gradle
+/.idea
