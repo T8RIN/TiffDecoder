@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-val libVersion = "1.0.2"
+val libVersion = "1.0.3"
 
 android {
     compileSdk = 36
@@ -13,6 +13,10 @@ android {
 
     defaultConfig {
         minSdk = 16
+    }
+
+    publishing {
+        singleVariant("release") {}
     }
 
     buildTypes {
@@ -42,7 +46,7 @@ afterEvaluate {
         publications {
             create<MavenPublication>("mavenJava") {
                 groupId = "com.github.t8rin"
-                artifactId = "tiff-factory"
+                artifactId = "TiffDecoder"
                 version = libVersion
                 from(components.findByName("release"))
             }
